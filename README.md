@@ -30,6 +30,14 @@ This package can be installed via composer:
 
 `composer require lucasgiovanny/laravel-erede`
 
+Set the enviroments variables in your `.env` file
+
+```
+REDE_PV=
+REDE_TOKEN=
+REDE_SANDBOX=false
+```
+
 ## Usage
 
 To use this package, you just need to import the Rede Facades.
