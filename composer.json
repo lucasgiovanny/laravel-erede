@@ -1,0 +1,27 @@
+{
+    "name": "lucasgiovanny/laravel-erede",
+    "description": "Laravel Service Provider to use eRede PHP SDK",
+    "authors": [
+        {
+            "name": "Lucas Giovanny",
+            "email": "lucasgiovanny@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": "^6.0|^7.0|^8.0",
+        "developersrede/erede-php": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "lucasgiovanny\\ERede\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lucasgiovanny\\ERede\\ERedeServiceProvider"
+            ]
+        }
+    }
+}
