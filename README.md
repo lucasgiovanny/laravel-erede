@@ -4,8 +4,6 @@ This package makes it easy to use [eRede PHP SDK](https://github.com/DevelopersR
 
 THIS IS A BETA PACKAGE. FEEL FREE TO HELP IMPROVE IT.
 
-<a href="https://www.buymeacoffee.com/lucasgiovanny" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
 ## Contents
 
 - [Installation](#installation)
