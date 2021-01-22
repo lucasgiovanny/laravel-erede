@@ -12,7 +12,7 @@ class Rede
     /**
      * Store $store
      */
-    private Store $_store;
+    private $_store;
 
     /**
      * Init the class with required params
