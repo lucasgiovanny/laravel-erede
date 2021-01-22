@@ -2,7 +2,7 @@
 
 This package makes it easy to use [eRede PHP SDK](https://github.com/DevelopersRede/erede-php) with Laravel framework.
 
-THIS IS A BETA PACKAGE. FEEL FREE TO HELP IMPROVE IT.
+<a href="https://www.buymeacoffee.com/lucasgiovanny" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## Contents
 
@@ -47,14 +47,20 @@ use  lucasgiovanny\ERede\Facades\Rede;
 ### Available methods
 
 - [`authorize`](#authorize): Authorize a transaction with creditcard.
+- [`cancel`](#cancel): Cancel a transaction.
+- [`get`](#get): Find a transaction by id.
+- [`getByReference`](#getByReference): Find a transaction by reference.
+- [`getRefunds`](#getRefunds): Find transaction refunds.
 
 #### authorize
 
-| Param      | Type                    |
-| ---------- | ----------------------- |
-| total      | _float_ (**required**)  |
-| reference  | _string_ (**required**) |
-| creditcard | _array_ (**required**)  |
+| Param        | Type                    |Default |
+| ------------ | ----------------------- | ------ |
+| total        | _float_ (**required**)  |        |
+| reference    | _string_ (**required**) |        |
+| creditcard   | _array_ (**required**)  |        |
+| capture      | _bool_                  | `true` |
+| installments | _int_                   | `1`    |
 
 Example:
 
@@ -76,10 +82,69 @@ if ($transaction->getReturnCode() == '00') {
 }
 ```
 
+- Transactions are captured by default, if you don't want this, you can set the capture parameter to `false`.
+
+- To set installments, just use the last parameter.
+
+#### cancel
+
+| Param        | Type                    |
+| ------------ | ----------------------- |
+| transaction  | _string_ (**required**) |
+
+Example:
+
+```php
+use  lucasgiovanny\ERede\Facades\Rede;
+
+$transaction = Rede::cancel('TID123');
+```
+
+#### get
+
+| Param        | Type                    |
+| ------------ | ----------------------- |
+| transaction  | _string_ (**required**) |
+
+Example:
+
+```php
+use  lucasgiovanny\ERede\Facades\Rede;
+
+$transaction = Rede::get('TID123');
+```
+
+#### getByReference
+
+| Param        | Type                    |
+| ------------ | ----------------------- |
+| reference    | _string_ (**required**) |
+
+Example:
+
+```php
+use  lucasgiovanny\ERede\Facades\Rede;
+
+$transaction = Rede::getByReference('TID123');
+```
+
+#### getRefunds
+
+| Param        | Type                    |
+| ------------ | ----------------------- |
+| transaction  | _string_ (**required**) |
+
+Example:
+
+```php
+use  lucasgiovanny\ERede\Facades\Rede;
+
+$transaction = Rede::getRefunds('TID123');
+```
+
 ## To do List
 
 - Tests
-- Implement others methods from eRede PHP SDK
 
 ## Changelog
 
