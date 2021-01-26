@@ -1,7 +1,7 @@
 {
     "name": "lucasgiovanny/laravel-erede",
     "description": "Laravel Service Provider to use eRede PHP SDK",
-    "keywords": "laravel, erede, rede, payment, pagamento",
+    "keywords": ["laravel, erede, rede, payment, pagamento"],
     "authors": [
         {
             "name": "Lucas Giovanny",
