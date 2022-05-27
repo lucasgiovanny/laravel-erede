@@ -24,7 +24,7 @@ This package makes it easy to use [eRede PHP SDK](https://github.com/DevelopersR
 
 This package can be installed via composer:
 
-`composer require lucasgiovanny/laravel-erede`
+`composer require lucasgiovanny/laravel-erede "^1.0"`
 
 Set the enviroments variables in your `.env` file
 
