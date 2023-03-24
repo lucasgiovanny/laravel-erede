@@ -1,5 +1,7 @@
 # eRede API for Laravel
 
+> THIS PROJECT IS NO LONGER BEING MAINTAINED
+
 This package makes it easy to use [eRede PHP SDK](https://github.com/DevelopersRede/erede-php) with Laravel framework.
 
 ## Contents
